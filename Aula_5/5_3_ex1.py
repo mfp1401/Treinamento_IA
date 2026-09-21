@@ -14,7 +14,7 @@ from sklearn.preprocessing import FunctionTransformer
 from sklearn.base import BaseEstimator, TransformerMixin
 
 
-# Carregando dataset, escolhendo colunas, convertendo a coluna income
+# Carregando dataset, escolhendo colunas, convertendo a coluna class
 # e verificando o shape do dataset
 
 df = fetch_openml("adult", version=2, as_frame=True).frame
