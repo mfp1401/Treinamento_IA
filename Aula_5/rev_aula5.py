@@ -50,6 +50,7 @@ pipe.fit(X_train, y_train)
 
 print(df.shape)
 print(df.isnull().sum())
+
 print(X_train.shape, X_test.shape)
 print(pipe.score(X_test, y_test))
 
