@@ -17,3 +17,8 @@ __pycache__/
 # Sistema operacional
 .DS_Store
 Thumbs.db
+
+# Arquivos gerados ao rodar os scripts a partir da raiz
+/*.joblib
+/*.gif
+/*.png

@@ -1,248 +1,65 @@
-\# Treinamento IA
+# Treinamento IA
 
+Repositório com os estudos, exercícios e desafios do treinamento de Inteligência Artificial do Inatel.
+O conteúdo segue a ordem das aulas: dos fundamentos de Python à implementação de algoritmos de Machine Learning do zero, com NumPy.
 
+---
 
-Repositório destinado aos estudos, exercícios e práticas desenvolvidos
+## 📚 Aulas
 
-durante o treinamento de Inteligência Artificial.
+| Aula | Tema | Conteúdo |
+|---|---|---|
+| [Aula 2](Aula2/README.md) | Introdução ao Python | variáveis, condicionais, listas, dicionários, `for` e `while` |
+| [Aula 3](Aula3/README.md) | NumPy, Pandas e Matplotlib | arrays, DataFrames, gráficos e análise exploratória |
+| [Aula 5](Aula5/README.md) | Machine Learning com scikit-learn | KNN, pipelines, feature engineering e seleção de features |
+| [Aula 6](Aula6/README.md) | ML na mão, com NumPy | álgebra linear, regressão, gradiente, logística, métricas, validação cruzada, KNN, Naive Bayes e árvore de decisão |
+| [Aula 7](Aula7/README.md) | Modelos avançados | regularização (Ridge, Lasso e ElasticNet) |
+| [Laboratórios](Laboratorios/README.md) | Projetos de ponta a ponta | Lab 1: classificação de pinguins |
 
+---
 
-
-O conteúdo está organizado de acordo com as aulas e acompanha uma
-
-progressão desde os fundamentos de Python até a introdução de
-
-Machine Learning.
-
-
-
-\---
-
-
-
-\## 📚 Conteúdos
-
-
-
-\### Aula 2 — Introdução ao Python e bibliotecas para análise de dados
-
-
-
-Nesta aula foram apresentados os fundamentos utilizados para trabalhar
-
-com dados em Python.
-
-
-
-Principais assuntos:
-
-
-
-\- Fundamentos da linguagem Python
-
-\- Variáveis e tipos de dados
-
-\- Estruturas de controle
-
-\- Estruturas de dados
-
-\- Funções
-
-\- NumPy
-
-\- Pandas
-
-\- Matplotlib
-
-\- Manipulação e análise básica de dados
-
-\- Visualização de dados
-
-
-
-\---
-
-
-
-\### Aula 3 — EDA (Exploratory Data Analysis)
-
-
-
-A aula 3 foi dedicada à \*\*Análise Exploratória de Dados (EDA)\*\*,
-
-com o objetivo de compreender, explorar e visualizar conjuntos de dados
-
-antes da aplicação de modelos de Machine Learning.
-
-
-
-Principais assuntos:
-
-
-
-\- Exploratory Data Analysis (EDA)
-
-\- Exploração de datasets
-
-\- Estatística descritiva
-
-\- Identificação de valores ausentes
-
-\- Análise de variáveis
-
-\- Distribuição dos dados
-
-\- Visualização de dados
-
-\- Gráficos utilizando Matplotlib
-
-\- Identificação de padrões e possíveis relações entre variáveis
-
-\- Preparação dos dados para etapas posteriores
-
-
-
-\---
-
-
-
-\### Aula 5 — Introdução ao Machine Learning
-
-
-
-A aula 5 apresentou os conceitos iniciais de Machine Learning,
-
-com foco em \*\*pré-processamento, classificação e construção de pipelines\*\*.
-
-
-
-Principais assuntos:
-
-
-
-\- Introdução ao Machine Learning
-
-\- Aprendizado supervisionado
-
-\- Classificação
-
-\- Separação entre dados de treino e teste
-
-\- Pré-processamento de dados
-
-\- Dados numéricos e categóricos
-
-\- `SimpleImputer`
-
-\- `StandardScaler`
-
-\- `OneHotEncoder`
-
-\- `ColumnTransformer`
-
-\- `Pipeline`
-
-\- Regressão Logística
-
-\- Validação cruzada
-
-\- `cross\_val\_score`
-
-\- Ajuste de hiperparâmetros
-
-\- `GridSearchCV`
-
-\- Avaliação de modelos
-
-\- `predict\_proba`
-
-\- Coeficientes da Regressão Logística
-
-\- Criação de transformadores personalizados
-
-\- Salvamento e carregamento de modelos com `Joblib`
-
-
-
-\#### Datasets utilizados
-
-
-
-\- Titanic
-
-\- Adult Income
-
-
-
-\---
-
-
-
-\## 🛠️ Tecnologias e bibliotecas
-
-
-
-\- Python
-
-\- NumPy
-
-\- Pandas
-
-\- Matplotlib
-
-\- Scikit-learn
-
-\- Joblib
-
-
-
-\---
-
-
-
-\## 📂 Estrutura do projeto
-
-
+## 📂 Estrutura do projeto
 
 ```text
+Treinamento_IA/
+├── Aula2/                      # fundamentos de Python
+├── Aula3/                      # NumPy, Pandas e Matplotlib
+├── Aula5/
+│   ├── Aula5.1/                # KNN e baseline
+│   ├── Aula5.3/                # pipelines (Titanic e Adult Income)
+│   ├── Aula5.4/                # feature engineering
+│   ├── Aula5.5/                # seleção de features
+│   └── revisao_aula5.py
+├── Aula6/
+│   ├── Aula6.1/ ... Aula6.9/   # cada pasta: exercicio_guiado.py + desafio.py + README.md
+├── Aula7/
+│   └── Aula7.1/                # regularização
+├── Laboratorios/
+├── requirements.txt
+└── README.md
+```
 
-Treinamento\_IA/
+Em cada aula, `exercicio_guiado.py` é o código construído em sala, e `desafio.py` é o desafio de casa.
 
-│
+---
 
-├── Aula2/
+## ▶️ Como executar
 
-│   └── Introdução ao Python, NumPy, Pandas e Matplotlib
+```bash
+# 1. criar e ativar o ambiente virtual
+python -m venv .venv
+.venv\Scripts\activate          # Windows
+# source .venv/bin/activate     # Linux / macOS
 
-│
+# 2. instalar as bibliotecas
+pip install -r requirements.txt
 
-├── Aula3/
+# 3. rodar um exercício
+python "Aula6/Aula6.9/desafio.py"
+```
 
-│   └── Análise Exploratória de Dados (EDA)
+---
 
-│
+## 🛠️ Tecnologias
 
-├── Aula\_5/
-
-│   ├── 5\_1.py
-
-│   ├── 5\_1\_ex1.py
-
-│   ├── 5\_1\_ex2.py
-
-│   ├── 5\_3.py
-
-│   ├── 5\_3\_ex1.py
-
-│   ├── adult\_income\_pipeline.joblib
-
-│   └── titanic\_pipeline.joblib
-
-│
-
-├── .gitignore
-
-├── README.md
-
-└── requirements.txt
-
+Python · NumPy · Pandas · Matplotlib · scikit-learn · SciPy · Joblib
