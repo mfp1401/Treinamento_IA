@@ -81,4 +81,4 @@ A implementação manual confere com o `PCA` do scikit-learn nos dois casos (mes
 
 ---
 
-**← Anterior:** [Aula 6.10](../Aula6.10/README.md) · **Voltar:** [Aula 6](../README.md) · **Próxima →** [Aula 7](../../Aula7/README.md)
+**← Anterior:** [Aula 6.10](../Aula6.10/README.md) · **Voltar:** [Aula 6](../README.md) · **Próxima →** [Aula 6.12](../Aula6.12/README.md)

@@ -17,6 +17,7 @@ Neste módulo os algoritmos deixam de ser caixas-pretas: cada um é **implementa
 | [6.9](Aula6.9/README.md) | Árvore de decisão do zero | árvore própria no dataset Iris |
 | [6.10](Aula6.10/README.md) | K-Means do zero (não supervisionado) | classe `KMeansDoZero` e segmentação de clientes |
 | [6.11](Aula6.11/README.md) | PCA por álgebra linear | redução de dimensionalidade no dataset Wine |
+| [6.12](Aula6.12/README.md) | Perceptron e MLP com backpropagation | rede neural do zero que aprende o XOR |
 
 Cada pasta tem `exercicio_guiado.py` (feito em aula), `desafio.py` ou `desafio.ipynb` (desafio de casa) e um `README.md` com o resumo e os resultados.
 
