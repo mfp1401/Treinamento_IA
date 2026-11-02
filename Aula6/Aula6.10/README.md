@@ -81,4 +81,4 @@ A queda perde força depois de K = 4, então ficamos com 4 grupos.
 
 ---
 
-**← Anterior:** [Aula 6.9](../Aula6.9/README.md) · **Voltar:** [Aula 6](../README.md) · **Próxima →** [Aula 7](../../Aula7/README.md)
+**← Anterior:** [Aula 6.9](../Aula6.9/README.md) · **Voltar:** [Aula 6](../README.md) · **Próxima →** [Aula 6.11](../Aula6.11/README.md)

@@ -16,8 +16,9 @@ Neste módulo os algoritmos deixam de ser caixas-pretas: cada um é **implementa
 | [6.8](Aula6.8/README.md) | Naive Bayes do zero | filtro de spam |
 | [6.9](Aula6.9/README.md) | Árvore de decisão do zero | árvore própria no dataset Iris |
 | [6.10](Aula6.10/README.md) | K-Means do zero (não supervisionado) | classe `KMeansDoZero` e segmentação de clientes |
+| [6.11](Aula6.11/README.md) | PCA por álgebra linear | redução de dimensionalidade no dataset Wine |
 
-Cada pasta tem `exercicio_guiado.py` (feito em aula), `desafio.py` (desafio de casa) e um `README.md` com o resumo e os resultados.
+Cada pasta tem `exercicio_guiado.py` (feito em aula), `desafio.py` ou `desafio.ipynb` (desafio de casa) e um `README.md` com o resumo e os resultados.
 
 ---
 
