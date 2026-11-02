@@ -12,7 +12,7 @@ O conteúdo segue a ordem das aulas: dos fundamentos de Python à implementaçã
 | [Aula 2](Aula2/README.md) | Introdução ao Python | variáveis, condicionais, listas, dicionários, `for` e `while` |
 | [Aula 3](Aula3/README.md) | NumPy, Pandas e Matplotlib | arrays, DataFrames, gráficos e análise exploratória |
 | [Aula 5](Aula5/README.md) | Machine Learning com scikit-learn | KNN, pipelines, feature engineering e seleção de features |
-| [Aula 6](Aula6/README.md) | ML na mão, com NumPy | álgebra linear, regressão, gradiente, logística, métricas, validação cruzada, KNN, Naive Bayes e árvore de decisão |
+| [Aula 6](Aula6/README.md) | ML na mão, com NumPy | álgebra linear, regressão, gradiente, logística, métricas, validação cruzada, KNN, Naive Bayes, árvore de decisão e K-Means |
 | [Aula 7](Aula7/README.md) | Modelos avançados | regularização (Ridge, Lasso e ElasticNet) |
 | [Laboratórios](Laboratorios/README.md) | Projetos de ponta a ponta | Lab 1: classificação de pinguins |
 
@@ -31,7 +31,7 @@ Treinamento_IA/
 │   ├── Aula5.5/                # seleção de features
 │   └── revisao_aula5.py
 ├── Aula6/
-│   ├── Aula6.1/ ... Aula6.9/   # cada pasta: exercicio_guiado.py + desafio.py + README.md
+│   ├── Aula6.1/ ... Aula6.10/  # cada pasta: exercicio_guiado.py + desafio.py + README.md
 ├── Aula7/
 │   └── Aula7.1/                # regularização
 ├── Laboratorios/

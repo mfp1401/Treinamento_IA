@@ -48,4 +48,4 @@ Com `max_depth=3`, a árvore faz as mesmas previsões do `DecisionTreeClassifier
 
 ---
 
-**← Anterior:** [Aula 6.8](../Aula6.8/README.md) · **Voltar:** [Aula 6](../README.md) · **Próxima →** [Aula 7](../../Aula7/README.md)
+**← Anterior:** [Aula 6.8](../Aula6.8/README.md) · **Voltar:** [Aula 6](../README.md) · **Próxima →** [Aula 6.10](../Aula6.10/README.md)
