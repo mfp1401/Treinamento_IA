@@ -1,13 +1,7 @@
-"""
-Aula 6.10 — K-Means do zero · Exercício guiado
-Segmentação de 150 clientes (compras por mês × gasto médio), slides 39 a 62.
-"""
-import os
-os.environ["OPENBLAS_NUM_THREADS"] = "1"   # evita o erro de memória do OpenBLAS
 
 
 # =============================================================
-# ETAPA 01 · Imports (slide 39)
+# ETAPA 01 · Imports 
 # =============================================================
 import numpy as np
 import matplotlib.pyplot as plt
@@ -16,7 +10,7 @@ print("NumPy", np.__version__)
 
 
 # =============================================================
-# ETAPA 02 · Gerador reprodutível de números (slide 40)
+# ETAPA 02 · Gerador reprodutível de números 
 # =============================================================
 def uniformes(n, semente):
     """n valores em [0, 1), sempre iguais para a mesma semente."""
@@ -35,7 +29,7 @@ print(uniformes(3, 0).round(3))
 
 
 # =============================================================
-# ETAPA 03 · Dataset com 150 clientes sintéticos (slide 41)
+# ETAPA 03 · Dataset com 150 clientes sintéticos 
 # =============================================================
 centros = np.array([[2.0, 60.0], [9.0, 75.0], [4.5, 260.0]])
 desvios = np.array([[0.6, 15.0], [1.0, 18.0], [0.9, 35.0]])
@@ -54,7 +48,7 @@ print(X[:3].round(1))
 
 
 # =============================================================
-# ETAPA 04 · Visualização dos clientes (slide 42)
+# ETAPA 04 · Visualização dos clientes 
 # =============================================================
 plt.figure(figsize=(7, 5))
 plt.scatter(X[:, 0], X[:, 1],
@@ -66,7 +60,7 @@ plt.show()
 
 
 # =============================================================
-# ETAPA 05 · Analisar e preparar características (slide 43)
+# ETAPA 05 · Analisar e preparar características 
 # =============================================================
 print("mínimo:", X.min(axis=0).round(1))
 print("máximo:", X.max(axis=0).round(1))
@@ -82,14 +76,14 @@ print("X_esc:", np.abs(X_esc.mean(axis=0)).round(3),
 
 
 # =============================================================
-# ETAPA 06 · Definir K (slide 44)
+# ETAPA 06 · Definir K 
 # =============================================================
 K = 3
 print("Vamos procurar", K, "grupos de clientes.")
 
 
 # =============================================================
-# ETAPA 07 · Inicializar os centroides (slide 45)
+# ETAPA 07 · Inicializar os centroides 
 # =============================================================
 def inicializar_centroides(X, K, semente):
     """Sorteia K amostras distintas de X."""
@@ -103,7 +97,7 @@ print(centroides.round(3))
 
 
 # =============================================================
-# ETAPA 08 · Calcular as distâncias (slide 46)
+# ETAPA 08 · Calcular as distâncias 
 # =============================================================
 def calcular_distancias(X, centroides):
     """Distâncias AO QUADRADO amostra × centroide: (n, K)."""
@@ -117,7 +111,7 @@ print(D[:3].round(3))
 
 
 # =============================================================
-# ETAPA 09 · Atribuir os clusters (slide 47)
+# ETAPA 09 · Atribuir os clusters 
 # =============================================================
 def atribuir_clusters(distancias):
     """Índice do centroide mais próximo de cada amostra: (n,)."""
@@ -130,7 +124,7 @@ print(np.bincount(labels, minlength=K))
 
 
 # =============================================================
-# ETAPA 10 · Atualizar os centroides (slide 48)
+# ETAPA 10 · Atualizar os centroides 
 # =============================================================
 def atualizar_centroides(X, labels, centroides, distancias):
     """Média de cada cluster; vazio recebe a amostra mais distante."""
@@ -152,7 +146,7 @@ print(novos.round(3))
 
 
 # =============================================================
-# ETAPA 11 · Testar cluster vazio (slide 49)
+# ETAPA 11 · Testar cluster vazio 
 # =============================================================
 X_teste = np.array([[0, 0], [0, 1], [10, 10], [10, 11]], dtype=float)
 C_teste = np.array([[0, 0.5], [10, 10.5], [50, 50]])
@@ -167,7 +161,7 @@ print("tem NaN?", np.isnan(C_novo).any())
 
 
 # =============================================================
-# ETAPA 12 · Laço iterativo do K-Means (slide 50)
+# ETAPA 12 · Laço iterativo do K-Means 
 # =============================================================
 C = inicializar_centroides(X_esc, K, semente=42)
 
@@ -180,7 +174,7 @@ for it in range(1, 6):
 
 
 # =============================================================
-# ETAPA 13 · Verificar convergência (slide 51)
+# ETAPA 13 · Verificar convergência 
 # =============================================================
 tol = 1e-4
 max_iter = 100
@@ -199,7 +193,7 @@ for it in range(1, max_iter + 1):
 
 
 # =============================================================
-# ETAPA 14 · Classe completa KMeansDoZero (slide 52)
+# ETAPA 14 · Classe completa KMeansDoZero 
 # =============================================================
 class KMeansDoZero:
     def __init__(self, n_clusters=3, max_iter=100,
@@ -253,7 +247,7 @@ class KMeansDoZero:
 
 
 # =============================================================
-# ETAPA 15 · Treinar modelo e testar fit/predict/fit_predict (slide 55)
+# ETAPA 15 · Treinar modelo e testar fit/predict/fit_predict 
 # =============================================================
 modelo = KMeansDoZero(n_clusters=3, random_state=42)
 modelo.fit(X_esc)
@@ -271,7 +265,7 @@ print(np.array_equal(outro.fit_predict(X_esc), modelo.labels_))
 
 
 # =============================================================
-# ETAPA 16 · Testes de robustez (slide 56)
+# ETAPA 16 · Testes de robustez 
 # =============================================================
 m1 = KMeansDoZero(1).fit(X_esc)                            # K = 1
 print("K=1:", np.allclose(m1.centroides_, X_esc.mean(axis=0)),
@@ -290,7 +284,7 @@ print("cópias:", not np.shares_memory(H[0], H[-1]))
 
 
 # =============================================================
-# ETAPA 17 · Visualizar clusters nas unidades originais (slide 57)
+# ETAPA 17 · Visualizar clusters nas unidades originais 
 # =============================================================
 cores = np.array(["#3B82F6", "#60CFFF", "#E2DDFF"])
 C_orig = modelo.centroides_ * desvio + media  # desfaz
@@ -307,7 +301,7 @@ print(C_orig.round(1))
 
 
 # =============================================================
-# ETAPA 18 · Desenhar histórico dos centroides (slide 58)
+# ETAPA 18 · Desenhar histórico dos centroides 
 # =============================================================
 H = modelo.historico_centroides_  # C0, C1, C2, C3
 fig, eixos = plt.subplots(1, len(H), figsize=(4 * len(H), 3.5))
@@ -320,7 +314,7 @@ plt.show()
 
 
 # =============================================================
-# ETAPA 19 · Calcular inércia de duas formas (slide 59)
+# ETAPA 19 · Calcular inércia de duas formas 
 # =============================================================
 J1 = modelo.inercia_
 J2 = np.sum((X_esc - modelo.centroides_[modelo.labels_]) ** 2)
@@ -334,7 +328,7 @@ plt.show()
 
 
 # =============================================================
-# ETAPA 20 · Método do cotovelo (slide 60)
+# ETAPA 20 · Método do cotovelo 
 # =============================================================
 valores_K = range(1, 9)
 inerciais = []
@@ -351,7 +345,7 @@ plt.show()
 
 
 # =============================================================
-# ETAPA 21 · Comparar sementes (slide 61)
+# ETAPA 21 · Comparar sementes 
 # =============================================================
 for semente in [42, 1, 7]:
     m = KMeansDoZero(3, random_state=semente).fit(X_esc)
@@ -365,7 +359,7 @@ print("melhor inércia entre 10 sementes:", round(melhor.inercia_, 3))
 
 
 # =============================================================
-# ETAPA 22 · Comparar com Scikit-learn (slide 62)
+# ETAPA 22 · Comparar com Scikit-learn 
 # =============================================================
 from sklearn.cluster import KMeans
 

@@ -1,9 +1,3 @@
-"""
-Aula 6.10 — K-Means do zero · Desafio de casa
-Implementar o K-Means com NumPy e segmentar clientes de uma loja online.
-"""
-import os
-os.environ["OPENBLAS_NUM_THREADS"] = "1"   # evita o erro de memória do OpenBLAS
 
 import numpy as np
 import matplotlib.pyplot as plt
