@@ -13,7 +13,7 @@ O conteúdo segue a ordem das aulas: dos fundamentos de Python à implementaçã
 | [Aula 3](Aula3/README.md) | NumPy, Pandas e Matplotlib | arrays, DataFrames, gráficos e análise exploratória |
 | [Aula 5](Aula5/README.md) | Machine Learning com scikit-learn | KNN, pipelines, feature engineering e seleção de features |
 | [Aula 6](Aula6/README.md) | ML na mão, com NumPy | álgebra linear, regressão, gradiente, logística, métricas, validação cruzada, KNN, Naive Bayes, árvore de decisão, K-Means, PCA e redes neurais |
-| [Aula 7](Aula7/README.md) | Modelos avançados | regularização (Ridge, Lasso e ElasticNet) |
+| [Aula 7](Aula7/README.md) | Algoritmos modernos e ajuste fino | regularização (Ridge, Lasso e ElasticNet) e SVM com kernel |
 | [Laboratórios](Laboratorios/README.md) | Projetos de ponta a ponta | Lab 1: classificação de pinguins |
 
 ---
@@ -33,7 +33,8 @@ Treinamento_IA/
 ├── Aula6/
 │   ├── Aula6.1/ ... Aula6.12/  # cada pasta: exercício guiado + desafio + README.md
 ├── Aula7/
-│   └── Aula7.1/                # regularização
+│   ├── Aula7.1/                # regularização
+│   └── Aula7.2/                # SVM e o truque do kernel
 ├── Laboratorios/
 ├── requirements.txt
 └── README.md

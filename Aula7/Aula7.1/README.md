@@ -29,4 +29,4 @@ Os quatro ficaram praticamente empatados: com só 10 variáveis e 442 amostras, 
 
 ---
 
-**Voltar:** [Aula 7](../README.md)
+**Voltar:** [Aula 7](../README.md) · **Próxima →** [Aula 7.2](../Aula7.2/README.md)
