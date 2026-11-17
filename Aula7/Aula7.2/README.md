@@ -66,4 +66,4 @@ Notebook executado: [`desafio.ipynb`](desafio.ipynb). Dataset `make_moons(n_samp
 
 ---
 
-**← Anterior:** [Aula 7.1](../Aula7.1/README.md) · **Voltar:** [Aula 7](../README.md)
+**← Anterior:** [Aula 7.1](../Aula7.1/README.md) · **Voltar:** [Aula 7](../README.md) · **Próxima →** [Aula 7.3](../Aula7.3/README.md)

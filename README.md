@@ -1,7 +1,7 @@
 # Treinamento IA
 
 Repositório com os estudos, exercícios e desafios do treinamento de Inteligência Artificial do Inatel.
-O conteúdo segue a ordem das aulas: dos fundamentos de Python à implementação de algoritmos de Machine Learning do zero, com NumPy.
+O conteúdo segue a ordem das aulas: dos fundamentos de Python à implementação de algoritmos de Machine Learning do zero, com NumPy, passando pelos algoritmos modernos (SVM, Random Forest e Boosting), pela otimização de hiperparâmetros e pelo AutoML.
 
 ---
 
@@ -13,7 +13,8 @@ O conteúdo segue a ordem das aulas: dos fundamentos de Python à implementaçã
 | [Aula 3](Aula3/README.md) | NumPy, Pandas e Matplotlib | arrays, DataFrames, gráficos e análise exploratória |
 | [Aula 5](Aula5/README.md) | Machine Learning com scikit-learn | KNN, pipelines, feature engineering e seleção de features |
 | [Aula 6](Aula6/README.md) | ML na mão, com NumPy | álgebra linear, regressão, gradiente, logística, métricas, validação cruzada, KNN, Naive Bayes, árvore de decisão, K-Means, PCA e redes neurais |
-| [Aula 7](Aula7/README.md) | Algoritmos modernos e ajuste fino | regularização (Ridge, Lasso e ElasticNet) e SVM com kernel |
+| [Aula 7](Aula7/README.md) | Algoritmos modernos e ajuste fino | regularização (Ridge, Lasso e ElasticNet), SVM com kernel, Random Forest, Boosting (XGBoost, LightGBM, CatBoost) e otimização de hiperparâmetros (Grid, Random e Optuna) |
+| [Aula 8](Aula8/README.md) | AutoML | comparação automática de modelos com LazyPredict |
 | [Laboratórios](Laboratorios/README.md) | Projetos de ponta a ponta | Lab 1: classificação de pinguins |
 
 ---
@@ -34,13 +35,19 @@ Treinamento_IA/
 │   ├── Aula6.1/ ... Aula6.12/  # cada pasta: exercício guiado + desafio + README.md
 ├── Aula7/
 │   ├── Aula7.1/                # regularização
-│   └── Aula7.2/                # SVM e o truque do kernel
+│   ├── Aula7.2/                # SVM e o truque do kernel
+│   ├── Aula7.3/                # Random Forest
+│   ├── Aula7.4/                # Boosting: XGBoost, LightGBM e CatBoost
+│   └── Aula7.5/                # otimização de hiperparâmetros: Grid, Random e Optuna
+├── Aula8/
+│   ├── Aula8.1/                # introdução ao AutoML
+│   └── Aula8.2/                # LazyPredict: comparação automática de modelos
 ├── Laboratorios/
 ├── requirements.txt
 └── README.md
 ```
 
-Em cada aula, `exercicio_guiado.py` é o código construído em sala, e `desafio.py` é o desafio de casa.
+Em cada aula, `exercicio_guiado` é o código construído em sala e `desafio` é o desafio de casa. Até a Aula 7.3 os arquivos são `.py`. A partir da 7.4, alguns são notebooks (`.ipynb`), já executados, com as saídas e os gráficos.
 
 ---
 
@@ -57,10 +64,13 @@ pip install -r requirements.txt
 
 # 3. rodar um exercício
 python "Aula6/Aula6.9/desafio.py"
+
+# 4. abrir um notebook (ou abrir o .ipynb direto no VS Code)
+jupyter notebook "Aula7/Aula7.5/desafio.ipynb"
 ```
 
 ---
 
 ## 🛠️ Tecnologias
 
-Python · NumPy · Pandas · Matplotlib · scikit-learn · SciPy · Joblib
+Python · NumPy · Pandas · Matplotlib · scikit-learn · SciPy · Joblib · XGBoost · LightGBM · CatBoost · Optuna · LazyPredict
